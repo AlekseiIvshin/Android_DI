@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/refresh_weather_desc"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/save_to_db"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
