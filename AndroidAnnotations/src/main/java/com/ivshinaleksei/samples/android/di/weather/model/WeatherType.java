@@ -18,7 +18,7 @@ public enum WeatherType {
     private final String weatherTypeName;
 
     WeatherType(String name) {
-        if("unknown".equals(getByName(name).value())) {
+        if("unknown".equals(getByName(name).getWeatherType())) {
             weatherTypeName = "unknown";
         }else{
             weatherTypeName = name;
@@ -26,13 +26,16 @@ public enum WeatherType {
 
     }
 
-    public String value(){
+    public String getWeatherType(){
         return weatherTypeName;
     }
 
     public static WeatherType getByName(String name){
-        for(WeatherType type: values()){
-            if(TextUtils.equals(type.value(), name)){
+        if(TextUtils.isEmpty(name)){
+            return NONE;
+        }
+        for(WeatherType type: WeatherType.values()){
+            if(name.equalsIgnoreCase(type.getWeatherType())){
                 return type;
             }
         }

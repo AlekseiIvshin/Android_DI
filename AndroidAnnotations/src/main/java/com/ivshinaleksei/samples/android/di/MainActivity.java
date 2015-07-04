@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ivshinaleksei.samples.android.di.weather.model.WeatherData;
+import com.ivshinaleksei.samples.android.di.weather.model.WeatherType;
 import com.ivshinaleksei.samples.android.di.weather.service.WeatherRestClient;
 
 import org.androidannotations.annotations.Background;
@@ -73,7 +74,7 @@ public class MainActivity extends Activity {
 
     @Background(delay = NOTIFICATION_DELAY)
     void remind(Notification notification){
-        mNotificationManager.notify(NOTIFICATION_ID,notification);
+        mNotificationManager.notify(NOTIFICATION_ID, notification);
     }
 
     @UiThread
@@ -81,5 +82,20 @@ public class MainActivity extends Activity {
         mWeatherDescription.setText(weatherData.getMainWeather().description);
         mTemperature.setText(String.valueOf(weatherData.main.temperature));
         mWind.setText(String.valueOf(weatherData.wind.speed));
+
+        updateWeatherImage(weatherData.getMainWeather().weatherType);
+    }
+
+    protected void updateWeatherImage(String type){
+        switch (type.toLowerCase()){
+            case "clouds":
+                mWeatherIcon.setImageResource(R.drawable.ic_weather_cloudy);
+                break;
+            case "clear":
+                mWeatherIcon.setImageResource(R.drawable.ic_weather_sunny);
+                break;
+            default:
+                mWeatherIcon.setImageResource(R.drawable.ic_weather_placeholder);
+        }
     }
 }

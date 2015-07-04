@@ -14,11 +14,4 @@ public class WeatherDesc {
     public String weatherType;
     public String description;
 
-    public WeatherDesc() {
-    }
-
-    public WeatherDesc(String type, String description) {
-        weatherType = type;
-        this.description = description;
-    }
 }

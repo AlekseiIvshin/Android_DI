@@ -29,6 +29,6 @@ public class WeatherData {
         if (weatherList != null && !weatherList.isEmpty()) {
             return weatherList.get(0);
         }
-        return new WeatherDesc(WeatherType.UNKNOWN.value(), "");
+        return new WeatherDesc();
     }
 }
