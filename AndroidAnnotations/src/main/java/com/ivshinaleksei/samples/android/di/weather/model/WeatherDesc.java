@@ -1,6 +1,5 @@
 package com.ivshinaleksei.samples.android.di.weather.model;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -11,12 +10,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WeatherDesc {
 
-    public final WeatherType weatherType;
-    public final String description;
+    @JsonProperty("main")
+    public String weatherType;
+    public String description;
 
-    @JsonCreator
-    public WeatherDesc(@JsonProperty("main") String type, String description){
-       weatherType = WeatherType.getByName(type);
+    public WeatherDesc() {
+    }
+
+    public WeatherDesc(String type, String description) {
+        weatherType = type;
         this.description = description;
     }
 }

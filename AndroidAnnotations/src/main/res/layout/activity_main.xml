@@ -19,10 +19,13 @@
         android:layout_alignParentEnd="true"/>
 
     <ImageButton
-        android:id="@+id/save_to_db"
+        android:id="@+id/remind_me"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/save_to_db_desc"/>
+        android:contentDescription="@string/remind_me_later"
+        android:src="@drawable/ic_alarm"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"/>
 
     <ImageView
         android:id="@+id/ic_weather"
