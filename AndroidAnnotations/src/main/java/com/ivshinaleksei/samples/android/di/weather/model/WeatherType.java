@@ -13,7 +13,7 @@ import java.lang.reflect.WildcardType;
  */
 public enum WeatherType {
 
-    NONE("none"), SUNNY("sunny"), CLOUDY("clouds"), UNKNOWN("unknown");
+    NONE("none"), SUNNY("sunny"), CLOUDY("clouds");
 
     private final String weatherTypeName;
 
@@ -36,6 +36,6 @@ public enum WeatherType {
                 return type;
             }
         }
-        return UNKNOWN;
+        return NONE;
     }
 }
