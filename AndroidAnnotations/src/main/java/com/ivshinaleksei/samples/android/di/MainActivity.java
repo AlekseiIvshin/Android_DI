@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ivshinaleksei.samples.android.di.weather.model.WeatherData;
-import com.ivshinaleksei.samples.android.di.weather.model.WeatherType;
 import com.ivshinaleksei.samples.android.di.weather.service.WeatherRestClient;
 
 import org.androidannotations.annotations.Background;
@@ -24,7 +23,7 @@ public class MainActivity extends Activity {
 
     private static final String LOAD_WEATHER_TASK = "load.weather.task";
 
-    private static final int NOTIFICATION_DELAY = 60*1000;
+    private static final int NOTIFICATION_DELAY = 60 * 1000;
     private static final int NOTIFICATION_ID = 1;
 
     @SystemService
@@ -65,7 +64,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-    @Background(id = LOAD_WEATHER_TASK)
+    @Background(id = LOAD_WEATHER_TASK, delay = 6000)
     void loadWeatherData() {
         // TODO: get city data and localization from anywhere.
         WeatherData weatherData = mWeatherRestClient.getWeather("Izhevsk", "ru");
@@ -73,21 +72,22 @@ public class MainActivity extends Activity {
     }
 
     @Background(delay = NOTIFICATION_DELAY)
-    void remind(Notification notification){
+    void remind(Notification notification) {
         mNotificationManager.notify(NOTIFICATION_ID, notification);
     }
 
     @UiThread
     void fillViews(WeatherData weatherData) {
         mWeatherDescription.setText(weatherData.getMainWeather().description);
-        mTemperature.setText(String.valueOf(weatherData.main.temperature));
-        mWind.setText(String.valueOf(weatherData.wind.speed));
+        mTemperature.setText(getResources().getString(R.string.temperature,
+                weatherData.main.temperature));
+        mWind.setText(getResources().getString(R.string.wind, weatherData.wind.speed));
 
         updateWeatherImage(weatherData.getMainWeather().weatherType);
     }
 
-    protected void updateWeatherImage(String type){
-        switch (type.toLowerCase()){
+    protected void updateWeatherImage(String type) {
+        switch (type.toLowerCase()) {
             case "clouds":
                 mWeatherIcon.setImageResource(R.drawable.ic_weather_cloudy);
                 break;

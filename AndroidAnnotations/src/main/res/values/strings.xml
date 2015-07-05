@@ -3,4 +3,6 @@
     <string name="ic_weather_desc">Weather icon</string>
     <string name="refresh_weather_desc">Refresh weather</string>
     <string name="remind_me_later">Remind me later</string>
+    <string name="temperature">Temperature: %.2f K</string>
+    <string name="wind">Wind speed: %.2f m/s</string>
 </resources>
