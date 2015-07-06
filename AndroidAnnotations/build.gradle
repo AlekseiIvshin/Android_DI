@@ -6,7 +6,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId 'com.ivshinaleksei.samples.android.di'
+        applicationId 'com.alekseiivshin.samples.android.di'
         minSdkVersion 19
         targetSdkVersion 22
         versionCode 1
