@@ -6,6 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name="com.alekseiivshin.samples.android.di.DaggerSampleApp"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.alekseiivshin.samples.android.di.MainActivity"
