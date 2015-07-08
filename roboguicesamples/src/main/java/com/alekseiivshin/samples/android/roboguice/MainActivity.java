@@ -1,4 +1,4 @@
-package com.alekseiivshin.samples.android.androidanotations;
+package com.alekseiivshin.samples.android.roboguice;
 
 import android.app.Notification;
 import android.app.NotificationManager;

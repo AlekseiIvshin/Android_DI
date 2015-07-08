@@ -1,4 +1,4 @@
-package com.alekseiivshin.samples.android.androidanotations;
+package com.alekseiivshin.samples.android.androidannotations;
 
 import android.app.Activity;
 import android.app.Notification;
@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.alekseiivshin.samples.android.androidanotations.weather.model.WeatherData;
-import com.alekseiivshin.samples.android.androidanotations.weather.service.WeatherRestClient;
+import com.alekseiivshin.samples.android.androidannotations.weather.model.WeatherData;
+import com.alekseiivshin.samples.android.androidannotations.weather.service.WeatherRestClient;
 
 import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Click;

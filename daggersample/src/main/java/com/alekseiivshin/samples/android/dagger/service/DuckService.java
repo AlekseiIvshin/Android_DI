@@ -1,4 +1,4 @@
-package com.alekseiivshin.samples.android.androidanotations.service;
+package com.alekseiivshin.samples.android.dagger.service;
 
 /**
  * Created by Aleksei Ivshin

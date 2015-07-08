@@ -1,11 +1,10 @@
-package com.alekseiivshin.samples.android.androidanotations;
+package com.alekseiivshin.samples.android.dagger;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.alekseiivshin.samples.android.androidanotations.daggersample.R;
-import com.alekseiivshin.samples.android.androidanotations.service.DuckService;
+import com.alekseiivshin.samples.android.dagger.service.DuckService;
 
 import javax.inject.Inject;
 
@@ -18,7 +17,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(DaggerSampleApp.getObjectGraph()!=null){
+        if (DaggerSampleApp.getObjectGraph() != null) {
             DaggerSampleApp.getObjectGraph().inject(this);
         }
     }
@@ -26,6 +25,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(this,"Duck: name = "+duckService.getDuckName()+"; hp = "+duckService.getHealthPoints()+";",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Duck: name = " + duckService.getDuckName() + "; hp = " + duckService.getHealthPoints() + ";", Toast.LENGTH_LONG).show();
     }
 }

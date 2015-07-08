@@ -1,4 +1,4 @@
-package com.alekseiivshin.samples.android.androidanotations.weather.model;
+package com.alekseiivshin.samples.android.androidannotations.weather.model;
 
 import android.text.TextUtils;
 

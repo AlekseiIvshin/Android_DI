@@ -1,8 +1,8 @@
-package com.alekseiivshin.samples.android.androidanotations.providers;
+package com.alekseiivshin.samples.android.dagger.providers;
 
-import com.alekseiivshin.samples.android.androidanotations.MainActivity;
-import com.alekseiivshin.samples.android.androidanotations.service.DuckService;
-import com.alekseiivshin.samples.android.androidanotations.service.RealDuckService;
+import com.alekseiivshin.samples.android.dagger.MainActivity;
+import com.alekseiivshin.samples.android.dagger.service.DuckService;
+import com.alekseiivshin.samples.android.dagger.service.RealDuckService;
 
 import dagger.Module;
 import dagger.Provides;

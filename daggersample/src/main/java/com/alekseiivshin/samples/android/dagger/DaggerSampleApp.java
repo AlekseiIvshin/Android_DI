@@ -1,8 +1,8 @@
-package com.alekseiivshin.samples.android.androidanotations;
+package com.alekseiivshin.samples.android.dagger;
 
 import android.app.Application;
 
-import com.alekseiivshin.samples.android.androidanotations.providers.DuckServiceModule;
+import com.alekseiivshin.samples.android.dagger.providers.DuckServiceModule;
 
 import dagger.ObjectGraph;
 
