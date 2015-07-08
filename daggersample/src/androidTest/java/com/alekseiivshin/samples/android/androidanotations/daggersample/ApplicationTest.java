@@ -1,4 +1,4 @@
-package com.eficksan.samples.android.di.butterknife;
+package com.alekseiivshin.samples.android.androidanotations.daggersample;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

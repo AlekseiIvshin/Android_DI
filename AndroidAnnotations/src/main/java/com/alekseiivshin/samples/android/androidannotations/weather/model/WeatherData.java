@@ -1,4 +1,4 @@
-package com.alekseiivshin.samples.android.di.weather.model;
+package com.alekseiivshin.samples.android.androidanotations.weather.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

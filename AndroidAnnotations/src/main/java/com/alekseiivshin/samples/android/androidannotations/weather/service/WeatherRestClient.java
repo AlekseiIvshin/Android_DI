@@ -1,6 +1,6 @@
-package com.alekseiivshin.samples.android.di.weather.service;
+package com.alekseiivshin.samples.android.androidanotations.weather.service;
 
-import com.alekseiivshin.samples.android.di.weather.model.WeatherData;
+import com.alekseiivshin.samples.android.androidanotations.weather.model.WeatherData;
 
 import org.androidannotations.annotations.rest.Get;
 import org.androidannotations.annotations.rest.Rest;

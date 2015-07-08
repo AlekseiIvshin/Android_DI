@@ -1,4 +1,4 @@
-package com.eficksan.samples.android.di.butterknife;
+package com.eficksan.samples.android.butterknife.butterknife;
 
 import android.app.Activity;
 import android.app.Notification;

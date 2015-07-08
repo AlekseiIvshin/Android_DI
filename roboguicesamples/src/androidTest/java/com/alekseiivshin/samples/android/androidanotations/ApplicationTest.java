@@ -1,4 +1,4 @@
-package com.alekseiivshin.samples.android.di;
+package com.alekseiivshin.samples.android.androidanotations;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
